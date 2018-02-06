@@ -1,9 +1,9 @@
-CustomList with FlowState option for Columns
-============================================
+CustomList app which supports FlowState option in the column picker
+===================================================================
 
 ## Overview
 
-A fork of the CustomList app which supports using FlowStates as the columns 
+A fork of the CustomList app which supports FlowState option in the column picker 
 
 Original can be found at [site.](https://github.com/RallyApps/app-catalog/tree/master/src/apps/customlist)
 
