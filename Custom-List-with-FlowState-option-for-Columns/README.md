@@ -1,8 +1,11 @@
-Random App Name209
-=========================
+CustomList with FlowState option for Columns
+============================================
 
 ## Overview
 
+A fork of the CustomList app which supports using FlowStates as the columns 
+
+Original can be found at [site.](https://github.com/RallyApps/app-catalog/tree/master/src/apps/customlist)
 
 ## License
 
