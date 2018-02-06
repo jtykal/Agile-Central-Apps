@@ -9,7 +9,7 @@ Original can be found at [site.](https://github.com/RallyApps/app-catalog/tree/m
 
 ## License
 
-Random App Name209 is released under the MIT license.  See the file [LICENSE](./LICENSE) for the full text.
+This app is released under the MIT license.  See the file [LICENSE](./LICENSE) for the full text.
 
 ##Documentation for SDK
 
