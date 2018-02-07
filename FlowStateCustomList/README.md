@@ -1,9 +1,9 @@
-CustomList app which supports FlowState in the column picker
-============================================================
+CustomList app which supports FlowState in column picker
+========================================================
 
 ## Overview
 
-A fork of the CustomList app which supports FlowState in the column picker 
+A fork of the CustomList app which supports FlowState in column picker 
 
 Original can be found at [site.](https://github.com/RallyApps/app-catalog/tree/master/src/apps/customlist)
 
