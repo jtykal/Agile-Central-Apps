@@ -3,6 +3,8 @@ Portfolio Item Grids with Project Picker in Project Column
 
 ## Overview
 
+Portfolio Item Grid which supports Project Picker field in Project column  
+
 RallyGridBoard enables plugins for filtering etc., while and RallyGrid that enable seamless integration with Portfolio Item Picker.
 
 ** You may need to adjust the model, and column selection in the code according to your setup **
