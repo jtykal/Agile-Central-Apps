@@ -3,8 +3,13 @@ Portfolio Item Grids with Project Picker in Project Column
 
 ## Overview
 
-Columns must be hardcoded, because changes to Project column template gets overridden by the column picker plugin.
+RallyGridBoard enables plugins for filtering etc., while and RallyGrid that enable seamless integration with Portfolio Item Picker.
 
+** You may need to adjust the model, and column selection in the code according to your setup **
+
+## Limitation
+
+Columns are hardcoded, because any custom column template gets overridden by the column picker plugin
 
 ## License
 
