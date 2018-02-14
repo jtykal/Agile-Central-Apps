@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Item Grid with ProjectPicker</title>
+
+    <script type="text/javascript" src="/apps/2.1/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define('Rally.example.PortfolioItemGridFork', {
+  extend: 'Rally.app.App',
+  componentCls: 'app',
+  launch: function () {
+    this.drawTypeComboBox();
+  },
+
+  drawTypeComboBox: function () {
+    this.typeComboBox = this.add({
+      xtype: 'rallyportfolioitemtypecombobox',
+      listeners: {
+        select: this.addStore,
+        ready: this.addStore,
+        scope: this
+      }
+    });
+  },
+
+  addStore: function () {
+    var selectedType = this.typeComboBox.getRecord();
+
+    Ext.create('Rally.data.wsapi.TreeStoreBuilder').build({
+      models: [selectedType.get('TypePath')],
+      autoLoad: false,
+      enableHierarchy: true
+    }).then({
+      success: this._onStoreBuilt,
+      scope: this
+    });
+  },
+
+  _onStoreBuilt: function (store) {
+    if (this.grid) {
+      this.grid.destroy();
+    }
+    var context = this.getContext();
+    this.grid = this.add({
+      xtype: 'rallygridboard',
+      context: context,
+      modelNames: [this.typeComboBox.getRecord().get('TypePath')],
+      toggleState: 'grid',
+      stateful: false,
+      enableEditing: true,
+      showRowActionsColumn: true,
+      plugins: [
+          'rallygridboardaddnew',
+          {
+                ptype: 'rallygridboardinlinefiltercontrol',
+                inlineFilterButtonConfig: {
+                    stateful: true,
+                    stateId: context.getScopedStateId('filters'),
+                    modelNames: [this.typeComboBox.getRecord().get('TypePath')],
+                    inlineFilterPanelConfig: {
+                        quickFilterPanelConfig: {
+                            defaultFields: [
+                                'ArtifactSearch',
+                                'Owner',
+                                'ModelType'
+                            ]
+                        }
+                    }
+                }
+            }
+
+
+      ],
+      gridConfig: {
+          store: store,
+          columnCfgs: [
+              'FormattedID',
+              'Name',
+              'Owner',
+              {
+                  xtype: 'templatecolumn',
+                  text: 'Project',
+                  dataIndex: 'Project',
+                  tpl: Ext.create('Rally.ui.renderer.template.ObjectTemplate', {
+                      extend: 'Ext.XTemplate',
+                      fieldName: 'Project'
+                  }),
+                  field: {
+                    xtype: 'rallyprojectpicker'
+                  }
+                }
+          ]
+      },
+      height: this.getHeight()
+    });
+  }
+});
+
+
+            Rally.launchApp('Rally.example.PortfolioItemGridFork', {
+                name:"Portfolio Item Grid with ProjectPicker",
+	            parentRepos:""
+            });
+
+        });
+    </script>
+
+
+
+    <style type="text/css">
+        .app {
+  /* Add app styles here */
+}
+
+    </style>
+</head>
+<body>
+</body>
+</html>
