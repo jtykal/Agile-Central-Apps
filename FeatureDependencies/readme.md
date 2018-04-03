@@ -5,6 +5,8 @@ Feature dependencies
 
 List of dependencies between Features.
 
+![alt text](https://raw.githubusercontent.com/jangodycki/Agile-Central-Apps/FeatureDependencies/Screen Shot 2018-04-03 at 13.54.42.png)
+
 
 ## License
 
