@@ -21,7 +21,7 @@
             '</div>' +
             '<div class="content">' +
             '<div class="name">{Name}</div>' +
-            //'<div class="description">{Description}</div>' +
+            '<div class="description">{Description}</div>' +
             '<div class="feature"><b>{Feature.FormattedID}:</b> {Feature.Name}</div>' +
             '</div>' +
             '<span class="planestimate">{[this.getEstimate(values)]}</span>' +
