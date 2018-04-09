@@ -145,13 +145,13 @@
 }
 .printcards .description {
   float: left;
-  font: 12pt NotoSans, Helvetica, Arial;
+  font: 10pt NotoSans, Helvetica, Arial;
   margin: 0.25em auto 0 auto;
   padding-left: 1.0em;
   padding-right: 1.0em;
   overflow-y: hidden;
   width: 100%;
-  height: auto;
+  height: 80px;
   word-wrap: break-word;
 }
 .printcards .feature {
